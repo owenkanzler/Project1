@@ -12,7 +12,59 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <header class="bg-zinc-500 fixed w-full">
+      <nav class="container mx-auto py-6 flex justify-between">
+        <h1 class="text-xl font-bold">Boredom</h1>
+        <ul class="flex gap-8 items-center">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="pt-20 container mx-auto grid grid-cols-3 gap-4 h-full">
+      <aside
+        class="mt-10 saved-tasks rounded-xl mr-4 p-6 flex flex-col items-center text-3xl"
+      >
+        <h3>Saved Tasks</h3>
+      </aside>
+      <section class="pt-10 hero col-span-2 flex flex-col items-center">
+        <h2 class="text-5xl text-center mb-2">
+          Beat Boredom <br />
+          Find Fun Ideas to Do Right Now!
+        </h2>
+        <p class="text-center mb-6">
+          Click generate to find youself soemthing to do when bored. save or go
+          onto the next
+        </p>
+        <button
+          class="mx-auto mb-10 py-4 px-10 bg-green-500 rounded-full text-white cursor-pointer"
+        >
+          Generate
+        </button>
+        <div class="img w-full h-64 bg-gray-500 rounded-xl mb-6"></div>
+        <div class="result w-full bg-gray-500 h-48 rounded-xl p-6 mb-3">
+          <p>Text...</p>
+        </div>
+        <div class="flex gap-3">
+          <button
+            class="py-3 px-10 bg-green-500 rounded-full text-white cursor-pointer"
+          >
+            Save
+          </button>
+          <button
+            class="py-3 px-10 bg-red-500 rounded-full text-white cursor-pointer"
+          >
+            Trash
+          </button>
+        </div>
+      </section>
+    </main>
+
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
