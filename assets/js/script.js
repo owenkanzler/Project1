@@ -6,6 +6,7 @@ const resultText = document.querySelector(".result");
 const savedTasks = document.querySelector(".saved-tasks");
 
 const boredUrl = "http://www.boredapi.com/api/activity/";
+const existingTasks = JSON.parse(localStorage.getItem("savedTasks")) || [];
 
 // function to fetch the data and handle the other function calls
 function handleGenerate() {
@@ -34,7 +35,24 @@ function handleGenerate() {
 }
 
 // function to save the task to saved tasks
-function saveTask(task) {}
+function saveTask(task) {
+  existingTasks.push(task);
+
+  localStorage.setItem("savedTasks", JSON.stringify(existingTasks));
+
+  rendertasks(existingTasks);
+}
+
+function rendertasks(tasks) {
+  savedTasks.innerHTML = "";
+
+  tasks.forEach((task) => {
+    const liEl = document.createElement("li");
+    liEl.textContent = task;
+
+    savedTasks.append(liEl);
+  });
+}
 
 // listens for a click on the generate button
 generateBtn.addEventListener("click", handleGenerate);
@@ -45,13 +63,15 @@ saveBtn.addEventListener("click", () => {
   const result = resultText.innerHTML;
 
   // check to see if there is anything in the result and then call the function
-  if (result) {
+  if (result && result !== "Text...") {
     saveTask(result);
   }
 });
 
 // listens for a click on the trash button
 trashBtn.addEventListener("click", () => {
-  resultDiv.innerHTML = "";
-  imgDiv.style.backgroundImage = "";
+  resultText.innerHTML = "";
+  imgDiv.innerHTML = "";
 });
+
+document.addEventListener("DOMContentLoaded", rendertasks(existingTasks));
