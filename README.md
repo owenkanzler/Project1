@@ -9,24 +9,16 @@ Provide a short description explaining the what, why, and how of your project. U
 - What problem does it solve?
 - What did you learn?
 
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-
-## Installation
-
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Our website is a tool used to demloish boredom! We've all had days where we have free time but cant think of anything fun or exciting to do with that time, well say goodbye to those times! This website will solve that problem with the simple clcik of a button, once the button is clicked you get a random activity and a image correlating to that activity, if the activity is spmething you like but may not want to commit to right away, then you can just save it for later! If the activty just doesn't tickle your fancy, then you can just trash it and generate a new one with another simple click of a button! Throughout this activity as a group we learned how to build a site through communicating through one another and helping eachother when stumped on the next step we needed to take, we also gained a better understanding of using API's getting 2 different API's to work properly with each other.
 
 ## Usage
-
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+GIVEN a boredom app
+WHEN I click the generate button
+THEN I am presented with an activity task
+WHEN I click the save button 
+THEN the task is moved to the saved tasks 
+WHEN I click the trash button
+THEN the task is removed
 
 
 ## Credits
