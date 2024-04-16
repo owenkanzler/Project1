@@ -2,13 +2,6 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
 Our website is a tool used to demloish boredom! We've all had days where we have free time but cant think of anything fun or exciting to do with that time, well say goodbye to those times! This website will solve that problem with the simple clcik of a button, once the button is clicked you get a random activity and a image correlating to that activity, if the activity is spmething you like but may not want to commit to right away, then you can just save it for later! If the activty just doesn't tickle your fancy, then you can just trash it and generate a new one with another simple click of a button! Throughout this activity as a group we learned how to build a site through communicating through one another and helping eachother when stumped on the next step we needed to take, we also gained a better understanding of using API's getting 2 different API's to work properly with each other.
 
 ## Usage
