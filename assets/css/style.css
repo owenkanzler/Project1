@@ -16,11 +16,15 @@ aside {
 }
 
 ul {
-  overflow: scroll;
   height: 100%;
 }
 
 .img {
   overflow: hidden;
   height: 24rem;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
 }
