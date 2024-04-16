@@ -82,11 +82,11 @@ function rendertasks(tasks) {
   savedTasks.innerHTML = "";
 
   // Loop through the tasks and render them
-  tasks.forEach((task, index) => {
+  tasks.forEach((task) => {
     const liEl = document.createElement("li");
     const deleteBtn = document.createElement("button");
     liEl.classList.add("task");
-    deleteBtn.textContent = "Delete";
+    deleteBtn.textContent = "X";
     deleteBtn.setAttribute("style", "color: red");
 
     // Attach event listener to delete button
