@@ -68,6 +68,16 @@ input:checked[type="checkbox"]::before {
   color: #fff;
 }
 
+.light-header {
+  background-color: darksalmon;
+  color: #fff;
+}
+
+.dark-header {
+  background-color: #0a34b3;
+  color: #fff;
+}
+
 .theme-label {
   color: white;
   text-shadow: 0 4px  #312f2f;

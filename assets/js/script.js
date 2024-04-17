@@ -11,12 +11,16 @@ const boredUrl = "http://www.boredapi.com/api/activity/";
 const existingTasks = JSON.parse(localStorage.getItem("savedTasks")) || [];
 
 const themeToggle = document.querySelector('#themeToggle');
+const navBar = document.querySelector("header");
+const body = document.body;
 //toggle theme "light or dark"
 themeToggle.addEventListener('change', function() {
   if (this.checked) {
-    document.body.className = 'dark-theme';
+    body.className = 'dark-theme';
+    navBar.className = 'dark-header';
   } else {
-    document.body.className = 'light-theme';
+    body.className = 'light-theme';
+    navBar.className = 'light-header';
   }
 });
 // function to fetch the data and handle the other function calls
