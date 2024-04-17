@@ -10,6 +10,19 @@ const boredUrl = "http://www.boredapi.com/api/activity/";
 // existing tasks from local storage
 const existingTasks = JSON.parse(localStorage.getItem("savedTasks")) || [];
 
+const themeToggle = document.querySelector('#themeToggle');
+const navBar = document.querySelector("header");
+const body = document.body;
+//toggle theme "light or dark"
+themeToggle.addEventListener('change', function() {
+  if (this.checked) {
+    body.className = 'dark-theme';
+    navBar.className = 'dark-header';
+  } else {
+    body.className = 'light-theme';
+    navBar.className = 'light-header';
+  }
+});
 // function to fetch the data and handle the other function calls
 function handleGenerate() {
   // fetch the data from the bored api

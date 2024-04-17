@@ -28,3 +28,59 @@ ul {
   display: flex;
   justify-content: space-between;
 }
+
+input[type="checkbox"] {
+  /*is displayed as a webkit appearance otherwise will just be a checkbox*/
+  -webkit-appearance: none;
+  position: relative;
+  background-color: rgb(175, 235, 235);
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 0;
+  background-color: rgb(253, 253, 250);
+  border-radius: 10px;
+  transform: scale(.9);
+  transition: 0.9s;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+input:checked[type="checkbox"]::before {
+  background-color: #4e00a2;
+  left: 40px;
+}
+
+.light-theme {
+  background-color: #fff;
+  color: #312f2f;
+}
+
+.dark-theme {
+  background-color: #4e00a2;
+  color: #fff;
+}
+
+.light-header {
+  background-color: darksalmon;
+  color: #fff;
+}
+
+.dark-header {
+  background-color: #0a34b3;
+  color: #fff;
+}
+
+.theme-label {
+  color: white;
+  text-shadow: 0 4px  #312f2f;
+  transform: rotate(30deg);
+  margin: -17px;
+}
