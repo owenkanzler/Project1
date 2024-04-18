@@ -31,6 +31,9 @@ https://github.com/Dameine
 Mit License
 
 ## Deployed Links
+Website: https://owenkanzler.github.io/Project1/
+
+Github Repo: https://github.com/owenkanzler/Project1
 
 ## Screenshots 
 ![alt text](./assets/images/1.png)
