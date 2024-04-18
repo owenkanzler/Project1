@@ -84,3 +84,7 @@ input:checked[type="checkbox"]::before {
   transform: rotate(30deg);
   margin: -17px;
 }
+
+.dark-theme .result {
+  color: black;
+}
