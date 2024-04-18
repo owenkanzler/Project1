@@ -9,7 +9,7 @@ const hideSaved = document.querySelector(".hide-saved");
 const modal = document.querySelector(".modal-backdrop");
 
 // bored api url
-const boredUrl = "http://www.boredapi.com/api/activity/";
+const boredUrl = "https://www.boredapi.com/api/activity/";
 // existing tasks from local storage
 const existingTasks = JSON.parse(localStorage.getItem("savedTasks")) || [];
 
