@@ -85,6 +85,7 @@ input:checked[type="checkbox"]::before {
   margin: -17px;
 }
 
-.dark-theme .result {
+.dark-theme .result,
+.dark-theme .modal-backdrop {
   color: black;
 }
