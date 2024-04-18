@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <header class="bg-gray-500 fixed w-full px-4">
+    <header class="bg-gray-500 fixed w-full px-4 z-20">
       <nav
         class="container mx-auto py-2 flex justify-content items-center text-white"
       >
@@ -22,14 +22,13 @@
           class="rounded-lg mx-auto"
         />
 
-        <input type="checkbox" id="themeToggle">
+        <input type="checkbox" id="themeToggle" />
         <h3 class="theme-label">change the theme!</h3>
-        
       </nav>
     </header>
 
     <main
-      class="pt-40 container mx-auto h-full pb-12 flex flex-col items-center p-4"
+      class="pt-40 container mx-auto h-full pb-12 flex flex-col items-center justify-center p-4 relative"
     >
       <h2 class="text-5xl text-center mb-2">
         Beat Boredom <br />
@@ -39,34 +38,36 @@
         Click generate to find youself something to do when bored. save or go
         onto the next.
       </p>
-      <button
-        class="generate mx-auto mb-10 py-4 px-10 bg-green-500 rounded-full text-white cursor-pointer"
-      >
-        Generate
-      </button>
-      <div
-        class="hero flex flex-col gap-4 h-full w-full lg:grid lg:grid-cols-3"
-      >
-        <aside
+      <div class="flex gap-x-4">
+        <button
+          class="generate mx-auto mb-10 py-4 px-10 bg-green-500 rounded-full text-white cursor-pointer hover:scale-105 transition-transform"
+        >
+          Generate
+        </button>
+        <button
+          class="show-saved mx-auto mb-10 py-4 px-10 bg-blue-500 rounded-full text-white cursor-pointer hover:scale-105 transition-transform"
+        >
+          Show Saved Tasks
+        </button>
+      </div>
+      <div class="hero flex flex-col gap-4 h-full w-full max-w-[800px]">
+        <!-- <aside
           class="w-full order-2 rounded-xl p-6 flex flex-col items-center lg:order-1"
         >
           <h3 class="text-3xl mb-4">Saved Tasks</h3>
-          <ul class="saved-tasks flex flex-col gap-4 w-full"></ul>
-        </aside>
-        <section
-          class="order-1 col-span-2 flex flex-col items-center lg:order-2"
-        >
+        </aside> -->
+        <section class="flex flex-col items-center">
           <div class="result-box w-full rounded-xl p-6 mb-3">
             <p class="result">Text...</p>
           </div>
           <div class="flex gap-3 mb-6">
             <button
-              class="save py-1 px-8 bg-green-500 rounded-full text-white cursor-pointer"
+              class="save py-1 px-8 bg-green-500 rounded-full text-white cursor-pointer hover:scale-105 transition-transform"
             >
               Save
             </button>
             <button
-              class="trash py-1 px-8 bg-red-500 rounded-full text-white cursor-pointer"
+              class="trash py-1 px-8 bg-red-500 rounded-full text-white cursor-pointer hover:scale-105 transition-transform"
             >
               Trash
             </button>
@@ -75,6 +76,24 @@
         </section>
       </div>
     </main>
+
+    <div
+      class="modal-backdrop h-screen w-full fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-black bg-opacity-50 flex justify-center items-center z-50 hidden"
+    >
+      <div
+        class="modal p-10 bg-[#fff] w-[600px] rounded-lg flex flex-col items-center"
+      >
+        <h3 class="text-3xl mb-4">Saved Tasks</h3>
+        <ul class="saved-tasks flex flex-col gap-4 w-full"></ul>
+        <div class="flex gap-3 mt-4">
+          <button
+            class="hide-saved py-1 px-8 bg-red-500 rounded-full text-white cursor-pointer hover:scale-105 transition-transform"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
 
     <script src="./assets/js/script.js"></script>
   </body>

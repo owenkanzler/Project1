@@ -4,25 +4,29 @@ const trashBtn = document.querySelector(".trash");
 const imgDiv = document.querySelector(".img");
 const resultText = document.querySelector(".result");
 const savedTasks = document.querySelector(".saved-tasks");
+const showSaved = document.querySelector(".show-saved");
+const hideSaved = document.querySelector(".hide-saved");
+const modal = document.querySelector(".modal-backdrop");
 
 // bored api url
 const boredUrl = "http://www.boredapi.com/api/activity/";
 // existing tasks from local storage
 const existingTasks = JSON.parse(localStorage.getItem("savedTasks")) || [];
 
-const themeToggle = document.querySelector('#themeToggle');
+const themeToggle = document.querySelector("#themeToggle");
 const navBar = document.querySelector("header");
 const body = document.body;
 //toggle theme "light or dark"
-themeToggle.addEventListener('change', function() {
+themeToggle.addEventListener("change", function () {
   if (this.checked) {
-    body.className = 'dark-theme';
-    navBar.className = 'dark-header';
+    body.className = "dark-theme";
+    navBar.className = "dark-header";
   } else {
-    body.className = 'light-theme';
-    navBar.className = 'light-header';
+    body.className = "light-theme";
+    navBar.className = "light-header";
   }
 });
+
 // function to fetch the data and handle the other function calls
 function handleGenerate() {
   // fetch the data from the bored api
@@ -114,6 +118,16 @@ function rendertasks(tasks) {
     savedTasks.append(liEl);
   });
 }
+
+showSaved.addEventListener("click", () => {
+  modal.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+});
+
+hideSaved.addEventListener("click", () => {
+  modal.classList.add("hidden");
+  document.body.style.overflow = "";
+});
 
 // listens for a click on the generate button
 generateBtn.addEventListener("click", handleGenerate);
